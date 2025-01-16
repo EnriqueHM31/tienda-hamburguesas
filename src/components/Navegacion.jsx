@@ -1,3 +1,5 @@
+import IconoGitHub from './icon/GitHub_Enrique.jsx'
+import Carrito from './icon/Icono-carrito.jsx'
 import { LINKS_NAVS } from '../utils/constantes.js'
 
 export default function Navegacion() {
@@ -16,10 +18,10 @@ export default function Navegacion() {
 				</ul>
 				<div className="iconos-nav">
 					<a href="/">
-						<img className="img-icono-nav " src="../src/assets/images/car.svg" alt="Icono del carrito de compras" />
+						<Carrito className="img-icono-nav " />
 					</a>
 					<a href="https://github.com/EnriqueHM31/" target="_blank" rel="noreferrer">
-						<img className="img-icono-nav " src="../src/assets/images/GitHub_Enrique.svg" alt="Icono del Git Hub de Luis Enrique" />
+						<IconoGitHub className="img-icono-nav " />
 					</a>
 				</div>
 			</div>
