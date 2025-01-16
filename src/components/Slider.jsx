@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { IMAGENES_SLIDER } from '../utils/constantes.js'
+
 export default function Slider() {
 	const [imagenes, setImagenes] = useState(IMAGENES_SLIDER)
 
@@ -13,9 +14,19 @@ export default function Slider() {
 	return (
 		<div className="contenedor-imagenes">
 			<div className="contenido-imagenes">
-				{imagenes.map(({ id, url, alt, check }) => {
+				{imagenes.map(({ id, url, alt, precio, check }) => {
 					const newvisibility = check ? 'block' : 'none'
-					return <img style={{ display: newvisibility }} key={id} src={url} alt={alt} />
+					return (
+						<>
+							<div style={{ display: newvisibility }} className="contenedor-imagen-publicidad">
+								<img className="marco-publicidad" src="../src/assets/img/circle.png" alt="Circle" />
+								<img className="img-publicidad" key={id} src={url} alt={alt} />
+								<div className="etiqueta-precio">
+									<p>${precio}</p>
+								</div>
+							</div>
+						</>
+					)
 				})}
 			</div>
 			<div className="contenedor-btn-slider">

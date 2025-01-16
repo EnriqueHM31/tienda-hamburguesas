@@ -1,12 +1,12 @@
-import IconoGitHub from './icon/GitHub_Enrique.jsx'
-import Carrito from './icon/Icono-carrito.jsx'
 import { LINKS_NAVS } from '../utils/constantes.js'
+import Carrito from './icon/Icono-carrito.jsx'
+import IconoGitHub from './icon/GitHub_Enrique.jsx'
 
 export default function Navegacion() {
 	return (
 		<nav className="nav-app">
 			<div className="container">
-				<img className="img-logo" src="../src/assets/images/logo.svg" alt="Logo de la tienda de la hamburguesas" />
+				<img className="img-logo" src="../src/assets/img/logo.svg" alt="Logo de la tienda de la hamburguesas" />
 				<ul className="menu-nav">
 					{LINKS_NAVS.map((link, index) => (
 						<li className="item-nav" key={index}>

@@ -10,7 +10,7 @@ export const DESCRIPCION_TIENDA = [
 ]
 
 export const IMAGENES_SLIDER = [
-	{ id: 1, url: '../src/assets/img/hamburguesa1.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', check: true },
-	{ id: 2, url: '../src/assets/img/hamburguesa2.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', check: false },
-	{ id: 3, url: '../src/assets/img/hamburguesa3.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', check: false },
+	{ id: 1, url: '../src/assets/img/hamburguesa1.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', precio: '100', check: true },
+	{ id: 2, url: '../src/assets/img/hamburguesa2.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', precio: '140', check: false },
+	{ id: 3, url: '../src/assets/img/hamburguesa3.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', precio: '180', check: false },
 ]
