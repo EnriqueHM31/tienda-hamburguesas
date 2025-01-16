@@ -1,7 +1,7 @@
 export const LINKS_NAVS = [
 	{ texto: 'Inicio', url: '/' },
+	{ texto: 'Productos', url: '/' },
 	{ texto: 'Conocenos', url: '/' },
-	{ texto: 'Pedidos', url: '/' },
 	{ texto: 'Contacto', url: '/' },
 ]
 
