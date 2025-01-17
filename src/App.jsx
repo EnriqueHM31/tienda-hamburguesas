@@ -1,5 +1,6 @@
 import Navegacion from './components/Navegacion.jsx'
 import Header from './components/Header.jsx'
+import Conocenos from './components/Conocenos.jsx'
 
 function App() {
 	return (
@@ -8,7 +9,9 @@ function App() {
 				<Navegacion />
 				<Header />
 			</header>
-			<main></main>
+			<main>
+				<Conocenos />
+			</main>
 		</>
 	)
 }
