@@ -1,6 +1,7 @@
 import Navegacion from './components/Navegacion.jsx'
 import Header from './components/Header.jsx'
 import Conocenos from './components/Conocenos.jsx'
+import Productos from './components/Productos.jsx'
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 				<Header />
 			</header>
 			<main>
+				<Productos />
 				<Conocenos />
 			</main>
 		</>
