@@ -3,7 +3,7 @@ import Slider from './Slider.jsx'
 
 export default function Header() {
 	return (
-		<header className="header-component">
+		<header id="inicio" className="header-component">
 			<div className="contenedor-header">
 				<Slider />
 
