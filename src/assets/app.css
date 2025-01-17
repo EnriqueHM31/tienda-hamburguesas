@@ -301,6 +301,7 @@ body {
     border-radius: 2rem;
     width: fit-content;
     font-weight: bold;
+    border: none;
     transition: background-color .6s, color .6s, box-shadow .4s;
 }
 
@@ -390,6 +391,110 @@ body {
     text-shadow: 0 0 1rem var(--rojo);
     line-height: 1.5;
 }
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 5rem;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.item-productos {
+    width: 100%;
+
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: .1rem solid var(--rojo);
+    min-height: 50rem;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1.8rem var(--blanco);
+    border: .1rem solid var(--blanco);
+}
+
+.producto:hover img {
+    transform: scale(1.2);
+}
+
+.imagen-producto {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: contain;
+    transition: transform .3s ease-in-out;
+}
+
+.contenido-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.nombre-producto {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.precio-producto {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: bold;
+    background: var(--blanco);
+    color: var(--rojo);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.btn-agregar {
+    width: 90%;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    cursor: pointer;
+}
+
+.detalles-productos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    width: 100%;
+}
+
+.btn-detalles {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    transition: background-color .6s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    transition: color .6s;
+}
+
+.btn-detalles:hover {
+    color: var(--rojo);
+}
+
 
 @keyframes TranslacionXleft {
     from {
