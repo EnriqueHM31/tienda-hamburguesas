@@ -26,6 +26,7 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 
@@ -34,7 +35,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+::after,
+::before {
     font-family: "titulos";
     letter-spacing: .1rem;
 }
@@ -55,7 +58,6 @@ select {
 body {
     background: var(--negro);
     color: var(--blanco);
-    overflow: hidden;
 }
 
 .header-app {
@@ -73,6 +75,7 @@ body {
     width: 100%;
     padding: 1rem 2rem;
     animation: TranslacionYtop .8s ease forwards;
+    z-index: 100;
 }
 
 .container {
@@ -307,6 +310,87 @@ body {
     box-shadow: 0 0 1rem var(--rojo);
 }
 
+
+
+/* CONOCENOS*/
+
+.seccion-conocenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    margin-top: 3rem;
+    width: 100%;
+    gap: 4rem;
+    view-timeline-name: --conocenos;
+}
+
+.imagen-conocenos {
+    width: 50%;
+    view-timeline-axis: block;
+    animation-timeline: --conocenos;
+    animation-range: entry -5% cover 40%;
+    animation-name: scaleseccion;
+    animation-fill-mode: both;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagen-conocenos::after {
+    font-size: clamp(1rem, 4vw, 3.5rem);
+    position: absolute;
+    content: 'Damos lo mejor para nuestros clientes';
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    inset: 0;
+    padding-bottom: 4rem;
+    background: linear-gradient(transparent, var(--negro) 90%);
+    transform: translateY(40rem);
+    transition: transform .6s;
+}
+
+.imagen-conocenos img {
+    width: 100%;
+    height: auto;
+    transition: filter .6s;
+    transition-delay: .4s;
+}
+
+.imagen-conocenos:hover img {
+    filter: contrast(1.5);
+}
+
+.imagen-conocenos:hover::after {
+    transform: translateY(0);
+}
+
+.contenido-conocenos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 40%;
+    padding: 0 3rem;
+    view-timeline-axis: block;
+    animation-timeline: --conocenos;
+    animation-range: entry -5% cover 40%;
+    animation-name: scaleseccion;
+    animation-fill-mode: both;
+}
+
+.contenido-conocenos h2 {
+    font-size: clamp(1rem, 4vw, 5.2rem);
+    color: var(--blanco);
+}
+
+.contenido-conocenos p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--blanco);
+    text-shadow: 0 0 1rem var(--rojo);
+    line-height: 1.5;
+}
+
 @keyframes TranslacionXleft {
     from {
         transform: translateX(60rem);
@@ -370,5 +454,15 @@ body {
 
     to {
         transform: translateY(5rem);
+    }
+}
+
+@keyframes scaleseccion {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
     }
 }
