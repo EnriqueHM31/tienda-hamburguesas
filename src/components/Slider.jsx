@@ -17,15 +17,14 @@ export default function Slider() {
 				{imagenes.map(({ id, url, alt, precio, check }) => {
 					const newvisibility = check ? 'block' : 'none'
 					return (
-						<>
-							<div style={{ display: newvisibility }} className="contenedor-imagen-publicidad">
-								<img className="marco-publicidad" src="../src/assets/img/circle.png" alt="Circle" />
-								<img className="img-publicidad" key={id} src={url} alt={alt} />
-								<div className="etiqueta-precio">
-									<p>${precio}</p>
-								</div>
+						<div key={id} style={{ display: newvisibility }} className="contenedor-imagen-publicidad">
+							<img className="marco-publicidad" src="../src/assets/img/circle.png" alt="Circle" />
+
+							<img className="img-publicidad" src={url} alt={alt} />
+							<div className="etiqueta-precio">
+								<p>${precio}</p>
 							</div>
-						</>
+						</div>
 					)
 				})}
 			</div>
