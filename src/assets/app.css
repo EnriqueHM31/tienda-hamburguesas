@@ -511,7 +511,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 3rem;
     width: 80%;
     min-height: 70dvh;
@@ -544,6 +544,7 @@ body {
     font-weight: bold;
     line-height: 1.5;
     text-align: center;
+    padding: 3rem 0;
 }
 
 .contenido-detalles {
@@ -551,7 +552,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     width: 50%;
 }
 

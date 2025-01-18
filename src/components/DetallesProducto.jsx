@@ -1,10 +1,10 @@
-export default function DetallesProducto(detalles, handleClickRemove) {
-	const data = detalles.detalles
+export default function DetallesProducto({ detalles, handleClickRemove }) {
+	const data = detalles // detalles ya es el objeto con la información
 
 	return (
 		<div className="overlay">
 			<article className="contenedor-detalles">
-				<h2>Informacion del producto</h2>
+				<h2>Información del producto</h2>
 				<div className="contenedor-informacion-detalles">
 					<div className="img-detalle">
 						<img src={`/src/assets/img/menu${data.id}.webp`} alt={data.nombre} />
@@ -22,7 +22,7 @@ export default function DetallesProducto(detalles, handleClickRemove) {
 						</ul>
 					</div>
 				</div>
-				<button onClick={() => handleClickRemove} className="btn-cerrar">
+				<button onClick={handleClickRemove} className="btn-cerrar">
 					<img src="/src/assets/img/close.svg" alt="icono para cerrar el modal de los detalles" />
 				</button>
 			</article>

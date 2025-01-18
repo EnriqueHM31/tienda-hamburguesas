@@ -1,21 +1,10 @@
-import { productos as Menu } from '../mook/productos'
 import IconoInformacionProducto from '../components/icon/Icono-información'
 import DetallesProducto from './DetallesProducto.jsx'
-import { useState } from 'react'
+import useProducto from '../hooks/producto'
 
 export default function Productos() {
-	const [detalles, setDetalles] = useState(null)
-	const [productos] = useState(Menu)
+	const { productos, detalles, handleClick, handleClickRemove } = useProducto()
 
-	const handleClick = (id) => {
-		const detalles = productos.find((producto) => producto.id === id)
-		setDetalles(detalles)
-	}
-
-	const handleClickRemove = () => {
-		console.log('se ha eliminado el producto')
-		setDetalles(null)
-	}
 	return (
 		<>
 			<ul id="productos" className="lista-productos">
@@ -38,8 +27,8 @@ export default function Productos() {
 						</li>
 					)
 				})}
+				{detalles && <DetallesProducto detalles={detalles} handleClick={handleClickRemove} />}
 			</ul>
-			{detalles !== null ? <DetallesProducto detalles={detalles} handleClickRemove={handleClickRemove} /> : null}
 		</>
 	)
 }
