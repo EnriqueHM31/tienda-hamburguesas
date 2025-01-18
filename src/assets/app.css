@@ -332,7 +332,7 @@ body {
     view-timeline-axis: block;
     animation-timeline: --conocenos;
     animation-range: entry -5% cover 40%;
-    animation-name: scaleseccion;
+    animation-name: translacionrightseccion;
     animation-fill-mode: both;
     overflow: hidden;
     position: relative;
@@ -377,7 +377,7 @@ body {
     view-timeline-axis: block;
     animation-timeline: --conocenos;
     animation-range: entry -5% cover 40%;
-    animation-name: scaleseccion;
+    animation-name: translacionleftseccion;
     animation-fill-mode: both;
 }
 
@@ -419,6 +419,13 @@ body {
     border: .1rem solid var(--rojo);
     min-height: 50rem;
     transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    view-timeline-name: --producto;
+    view-timeline-axis: block;
+    animation-timeline: --producto;
+
+    animation-name: scaleseccion;
+    animation-fill-mode: both;
+    animation-range: entry 0% cover 40%;
 }
 
 .producto:hover {
@@ -682,5 +689,26 @@ body {
 
     to {
         scale: 1;
+    }
+}
+
+
+@keyframes translacionleftseccion {
+    from {
+        transform: translateX(-40rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes translacionrightseccion {
+    from {
+        transform: translateX(40rem);
+    }
+
+    to {
+        transform: translateX(0);
     }
 }
