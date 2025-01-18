@@ -80,11 +80,12 @@ body {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 3rem;
     padding: 1.5rem 0;
 }
 
@@ -631,6 +632,118 @@ body {
     background: var(--rojo);
     color: var(--blanco);
 }
+
+
+/*** GALERIA ***/
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 4rem 0;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.galeria h2 {
+    font-size: clamp(1.2rem, 4vw, 4rem);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+
+.galeria-img {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 13rem 17rem 13rem 17rem;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.galeria-img-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5rem;
+    background: red;
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria-img-item::after {
+    content: 'Food DivCode';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#000a 60%, rgba(255, 0, 0, 0.561));
+    border-radius: 2rem;
+    transform: translate3d(0, 40rem, 0);
+    transition: scale .6s, transform .6s;
+    display: grid;
+    place-items: center;
+    font-size: clamp(1rem, 4vw, 2rem);
+}
+
+
+.galeria-img-item:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.galeria-1 {
+    grid-row: span 2;
+}
+
+.galeria-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeria-6 {
+    grid-row: span 2;
+}
+
+
+
+.galeria-7 {
+    grid-row: span 2;
+}
+
+.galeria-8 {
+    grid-row: span 2;
+}
+
+.galeria-img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2.5rem;
+}
+
+.galeria-4 img {
+    object-position: bottom;
+}
+
+.logo-grid {
+    position: absolute;
+    width: min(25%, 100%);
+    height: min(25%, 100%);
+    background: var(--negro);
+    padding: 2rem;
+    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s;
+}
+
+.logo-grid:hover {
+    transform: translate(-50%, -50%) scale(1.4);
+}
+
 
 @keyframes TranslacionXleft {
     from {
