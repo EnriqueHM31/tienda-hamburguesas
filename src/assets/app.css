@@ -76,6 +76,7 @@ body {
     padding: 1rem 2rem;
     animation: TranslacionYtop .8s ease forwards;
     z-index: 100;
+    background: var(--negro);
 }
 
 .container {
@@ -495,6 +496,117 @@ body {
     color: var(--rojo);
 }
 
+/*DETALLES DE LOS PRODUCTOS*/
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(#000a, var(--negro) 50%);
+    z-index: 100;
+    display: grid;
+    place-items: center;
+}
+
+.contenedor-detalles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 80%;
+    min-height: 70dvh;
+    padding: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--rojo);
+    position: relative;
+}
+
+.contenedor-informacion-detalles {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-detalle {
+    min-width: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.img-detalle img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+}
+
+.contenedor-detalles h2 {
+    font-size: clamp(1.2rem, 4vw, 4rem);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contenido-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 50%;
+}
+
+.contenedor-detalles h3 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.contenido-detalles p {
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+
+}
+
+.precio {
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    background: var(--blanco);
+    color: var(--rojo);
+    font-weight: bold;
+}
+
+.btn-cerrar {
+    background: var(--rojo);
+    border-radius: 50%;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+}
+
+.lista-ingredientes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+}
+
+.lista-ingredientes li {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    background: var(--rojo);
+    color: var(--blanco);
+}
 
 @keyframes TranslacionXleft {
     from {
