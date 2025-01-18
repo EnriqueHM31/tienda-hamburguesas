@@ -154,10 +154,26 @@ body {
 }
 
 .iconos-nav a {
-    width: 3rem;
+    place-items: center;
+    width: 5rem;
     height: auto;
     color: var(--blanco);
     transition: color .6s;
+    position: relative;
+}
+
+.iconos-nav a span {
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    background: var(--rojo);
+    color: var(--blanco);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    top: -1rem;
+    right: .3rem;
+    font-size: clamp(1rem, 4vw, 1.7rem);
 }
 
 .iconos-nav a:hover {

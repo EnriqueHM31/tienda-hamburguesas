@@ -18,6 +18,7 @@ export default function Navegacion() {
 				</ul>
 				<div className="iconos-nav">
 					<a href="/">
+						<span className="cantidad-productos">0</span>
 						<Carrito className="img-icono-nav " />
 					</a>
 					<a href="https://github.com/EnriqueHM31/" target="_blank" rel="noreferrer">
