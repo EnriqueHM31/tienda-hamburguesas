@@ -8,7 +8,7 @@ export default function Productos({ productos, handleClick, handleClickAgregar }
 					return (
 						<li key={id} className="item-producto">
 							<article className="producto">
-								<img loading="lazy" className="imagen-producto" src={`./src/assets/img/menu${id}.webp`} alt={nombre} />
+								<img loading="lazy" className="imagen-producto" src={`./src/assets/img/menu/menu${id}.webp`} alt={nombre} />
 								<div className="contenido-producto">
 									<p className="nombre-producto">{nombre}</p>
 									<div className="detalles-productos">
