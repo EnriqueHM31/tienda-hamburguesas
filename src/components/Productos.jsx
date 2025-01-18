@@ -1,10 +1,6 @@
 import IconoInformacionProducto from '../components/icon/Icono-información'
-import DetallesProducto from './DetallesProducto.jsx'
-import useProducto from '../hooks/producto'
 
-export default function Productos() {
-	const { productos, detalles, handleClick, handleClickRemove } = useProducto()
-
+export default function Productos({ productos, handleClick }) {
 	return (
 		<>
 			<ul id="productos" className="lista-productos">
@@ -27,7 +23,6 @@ export default function Productos() {
 						</li>
 					)
 				})}
-				{detalles && <DetallesProducto detalles={detalles} handleClick={handleClickRemove} />}
 			</ul>
 		</>
 	)
