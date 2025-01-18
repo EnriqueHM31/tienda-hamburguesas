@@ -1,6 +1,6 @@
 import IconoInformacionProducto from '../components/icon/Icono-información'
 
-export default function Productos({ productos, handleClick }) {
+export default function Productos({ productos, handleClick, handleClickAgregar }) {
 	return (
 		<>
 			<ul id="productos" className="lista-productos">
@@ -18,7 +18,9 @@ export default function Productos({ productos, handleClick }) {
 										</button>
 									</div>
 								</div>
-								<button className="btn-header btn-agregar">Agregar</button>
+								<button onClick={() => handleClickAgregar(id)} className="btn-header btn-agregar">
+									Agregar
+								</button>
 							</article>
 						</li>
 					)

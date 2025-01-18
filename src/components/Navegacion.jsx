@@ -2,7 +2,7 @@ import { LINKS_NAVS } from '../utils/constantes.js'
 import Carrito from './icon/Icono-carrito.jsx'
 import IconoGitHub from './icon/GitHub_Enrique.jsx'
 
-export default function Navegacion() {
+export default function Navegacion({ cantidadProductos }) {
 	return (
 		<nav className="nav-app">
 			<div className="container">
@@ -18,7 +18,7 @@ export default function Navegacion() {
 				</ul>
 				<div className="iconos-nav">
 					<a href="/">
-						<span className="cantidad-productos">0</span>
+						<span className="cantidad-productos">{cantidadProductos}</span>
 						<Carrito className="img-icono-nav " />
 					</a>
 					<a href="https://github.com/EnriqueHM31/" target="_blank" rel="noreferrer">
