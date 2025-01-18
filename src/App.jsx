@@ -6,6 +6,7 @@ import DetallesProducto from './components/DetallesProducto.jsx'
 import useProducto from './hooks/producto'
 import useProductoInfo from './hooks/productoInfo.js'
 import operarProductos from './hooks/operarProductos.js'
+import Galeria from './components/Galeria.jsx'
 
 function App() {
 	const { productos } = useProducto()
@@ -21,6 +22,7 @@ function App() {
 			<main>
 				<Productos handleClickAgregar={handleClickCantidadProductos} productos={productos} detalles={detalles} handleClick={handleClick} />
 				<Conocenos />
+				<Galeria />
 			</main>
 			{detalles && <DetallesProducto detalles={detalles} handleClickRemove={handleClickRemove} />}
 		</>
