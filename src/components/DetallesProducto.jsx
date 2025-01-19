@@ -7,11 +7,11 @@ export default function DetallesProducto({ detalles, handleClickRemove }) {
 				<h2>Información del producto</h2>
 				<div className="contenedor-informacion-detalles">
 					<div className="img-detalle">
-						<img src={`/src/assets/img/menu${data.id}.webp`} alt={data.nombre} />
+						<img src={`/src/assets/img/menu/menu${data.id}.webp`} alt={data.nombre} />
+						<h3>Producto: {data.nombre}</h3>
 					</div>
 
 					<div className="contenido-detalles">
-						<h3>Producto: {data.nombre}</h3>
 						<p className="precio">Precio: ${data.precio}</p>
 						<p className="descripcion">{data.descripcion}</p>
 
