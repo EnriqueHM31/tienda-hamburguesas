@@ -1,8 +1,8 @@
 export const LINKS_NAVS = [
-	{ texto: 'Inicio', url: '/#inicio' },
-	{ texto: 'Productos', url: '/#productos' },
-	{ texto: 'Conocenos', url: '#seccion-conocenos' },
-	{ texto: 'Galeria', url: '#galeria' },
+	{ texto: 'Inicio', url: '/' },
+	{ texto: 'Productos', url: '/productos' },
+	{ texto: 'Conocenos', url: '/conocenos' },
+	{ texto: 'Galeria', url: '/galeria' },
 	{ texto: 'Contacto', url: '/' },
 ]
 

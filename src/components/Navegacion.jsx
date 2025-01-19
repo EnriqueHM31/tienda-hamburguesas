@@ -1,6 +1,7 @@
 import { LINKS_NAVS } from '../utils/constantes.js'
 import Carrito from './icon/Icono-carrito.jsx'
 import IconoGitHub from './icon/GitHub_Enrique.jsx'
+import { Link } from 'react-router-dom'
 
 export default function Navegacion({ cantidadProductos }) {
 	return (
@@ -10,17 +11,17 @@ export default function Navegacion({ cantidadProductos }) {
 				<ul className="menu-nav">
 					{LINKS_NAVS.map((link, index) => (
 						<li className="item-nav" key={index}>
-							<a className="link-nav" href={link.url}>
+							<Link className="link-nav" to={link.url}>
 								{link.texto}
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
 				<div className="iconos-nav">
-					<a href="/">
+					<Link to="/carrito">
 						<span className="cantidad-productos">{cantidadProductos}</span>
 						<Carrito className="img-icono-nav " />
-					</a>
+					</Link>
 					<a href="https://github.com/EnriqueHM31/" target="_blank" rel="noreferrer">
 						<IconoGitHub className="img-icono-nav " />
 					</a>

@@ -1,12 +1,19 @@
+//COMPONENTES
 import Navegacion from './components/Navegacion.jsx'
-import Header from './components/Header.jsx'
-import Conocenos from './components/Conocenos.jsx'
-import Productos from './components/Productos.jsx'
 import DetallesProducto from './components/DetallesProducto.jsx'
+
+//Pages
+import Carrito from './pages/Carrito.jsx'
+import Header from './pages/Header.jsx'
+import Conocenos from './pages/Conocenos.jsx'
+import Productos from './pages/Productos.jsx'
+import Galeria from './pages/Galeria.jsx'
+//HOOOKS
 import useProducto from './hooks/producto'
 import useProductoInfo from './hooks/productoInfo.js'
 import operarProductos from './hooks/operarProductos.js'
-import Galeria from './components/Galeria.jsx'
+//Navegacion
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 	const { productos } = useProducto()
@@ -15,15 +22,15 @@ function App() {
 
 	return (
 		<>
-			<header className="header-app">
-				<Navegacion cantidadProductos={cantidadProductos} />
-				<Header />
-			</header>
-			<main>
-				<Productos handleClickAgregar={handleClickCantidadProductos} productos={productos} detalles={detalles} handleClick={handleClick} />
-				<Conocenos />
-				<Galeria />
-			</main>
+			<Navegacion cantidadProductos={cantidadProductos} />
+
+			<Routes>
+				<Route path="/" element={<Header />} />
+				<Route path="/productos" element={<Productos handleClickAgregar={handleClickCantidadProductos} productos={productos} detalles={detalles} handleClick={handleClick} />} />
+				<Route path="/conocenos" element={<Conocenos />} />
+				<Route path="/galeria" element={<Galeria />} />
+				<Route path="/carrito" element={<Carrito />} />
+			</Routes>
 			{detalles && <DetallesProducto detalles={detalles} handleClickRemove={handleClickRemove} />}
 		</>
 	)
