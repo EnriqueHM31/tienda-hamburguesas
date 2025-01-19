@@ -40,6 +40,7 @@ h6,
 ::before {
     font-family: "titulos";
     letter-spacing: .1rem;
+    text-wrap: balance;
 }
 
 p,
@@ -53,6 +54,7 @@ button,
 select {
     font-family: "parrafos";
     letter-spacing: .1rem;
+    text-wrap: pretty;
 }
 
 body {
@@ -100,7 +102,7 @@ body {
 
 .link-nav {
     color: var(--blanco);
-    font-size: clamp(1rem, 4vw, 2.2rem);
+    font-size: clamp(2rem, 5vw, 2.2rem);
     transition: color 0.3s ease-in-out;
     width: 100%;
     text-align: center;
@@ -165,12 +167,28 @@ body {
     place-content: center;
     border-radius: 50%;
     top: -1rem;
-    right: .3rem;
-    font-size: clamp(1rem, 4vw, 1.7rem);
+    right: clamp(-1rem, 1vw, .3rem);
+    font-size: clamp(1.4rem, 4vw, 1.7rem);
 }
 
 .iconos-nav a:hover {
     color: var(--rojo);
+}
+
+
+.icono-menu {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 101;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: none;
+}
+
+.icono-menu svg {
+    width: clamp(1.5rem, 4vw, 2rem);
+    fill: var(--blanco);
 }
 
 .header-component {
@@ -273,12 +291,12 @@ body {
 }
 
 .contenido-header h1 {
-    font-size: clamp(1rem, 4vw, 5.2rem);
+    font-size: clamp(2rem, 4vw, 5.2rem);
     color: var(--blanco);
 }
 
 .contenido-header p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
     color: var(--blanco);
     text-shadow: 0 0 1rem var(--rojo);
     line-height: 1.5;
@@ -524,13 +542,14 @@ body {
     background: var(--rojo);
     border-radius: 50%;
     border: none;
-    width: 5rem;
-    height: 5rem;
+    width: clamp(4rem, 4vw, 5rem);
+    height: clamp(4rem, 4vw, 5rem);
     position: absolute;
     top: 3rem;
     right: 3rem;
     cursor: pointer;
 }
+
 
 .lista-ingredientes {
     display: flex;
@@ -566,6 +585,7 @@ body {
     width: 50%;
     view-timeline-axis: block;
     animation: translacionleftseccion 1s ease forwards;
+    overflow: hidden;
 }
 
 .imagen-conocenos::after {
@@ -608,12 +628,12 @@ body {
 }
 
 .contenido-conocenos h2 {
-    font-size: clamp(1rem, 4vw, 5.2rem);
+    font-size: clamp(2.5rem, 4vw, 5.2rem);
     color: var(--blanco);
 }
 
 .contenido-conocenos p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
     color: var(--blanco);
     text-shadow: 0 0 1rem var(--rojo);
     line-height: 1.5;
@@ -628,12 +648,15 @@ body {
     align-items: center;
     justify-content: center;
     width: 80%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 5rem;
+    height: 100dvh;
+    gap: 4rem;
+    margin-top: 10rem;
+    margin: 10rem auto;
+    margin-bottom: 5rem;
+}
+
+.galeria h2 {
+    font-size: clamp(3rem, 6vw, 4rem);
 }
 
 
@@ -647,6 +670,7 @@ body {
     justify-items: center;
     gap: 2rem;
     position: relative;
+    padding-bottom: 4rem;
 }
 
 .galeria-img-item {
@@ -1003,5 +1027,181 @@ body {
 
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /*HEADER*/
+
+    .nav-app {
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .icono-menu {
+        display: grid;
+        place-content: center;
+    }
+
+    .icono-menu svg {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100dvh;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--negro);
+        z-index: 100;
+
+    }
+
+    .contenedor-header {
+        flex-direction: column;
+    }
+
+    .contenedor-imagenes {
+        order: 2;
+        width: 70%;
+    }
+
+    .contenido-header {
+        order: 1;
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+
+    /*DETALLES DE LOS PRODUCTOS*/
+
+    .contenedor-detalles {
+        gap: 1rem;
+    }
+
+    .contenedor-informacion-detalles {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+    }
+
+    .img-detalle img {
+        width: 70%;
+        height: max-content;
+    }
+
+    .contenido-detalles {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .lista-ingredientes {
+        width: 100%;
+    }
+
+    .btn-cerrar {
+        top: -1.5rem;
+        right: -1.5rem;
+    }
+
+    .btn-cerrar img {
+        width: 50%;
+    }
+
+
+    /*CONOCENOS*/
+    .seccion-conocenos {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .imagen-conocenos {
+        order: 2;
+        width: 80%;
+    }
+
+    .contenido-conocenos {
+        order: 1;
+        width: 90%;
+        align-items: center;
+    }
+
+    /*GALERIA*/
+
+    .galeria {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .galeria-img {
+        grid-template-rows: 13rem 17rem 13rem 17rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /*HEADER*/
+    .icono-menu svg,
+    .iconos-nav a {
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .iconos-nav a span {
+        right: -1rem;
+    }
+
+    .iconos-nav a svg {
+        width: 100%;
+    }
+
+    .contenedor-imagenes {
+        width: 100%;
+    }
+
+    .etiqueta-precio {
+        height: 4rem;
+    }
+
+    .etiqueta-precio p {
+        margin-top: 1rem;
+    }
+
+    .contenedor-header {
+        padding-top: 5rem;
+        gap: 1rem;
+    }
+
+    /*GALERIA */
+
+    .galeria {
+        min-height: max-content;
+        margin-top: 10rem;
+    }
+
+    .galeria-img {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo-grid {
+        display: none;
     }
 }
