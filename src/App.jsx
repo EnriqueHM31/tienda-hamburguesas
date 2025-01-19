@@ -18,7 +18,7 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
 	const { productos } = useProducto()
 	const { detalles, handleClick, handleClickRemove } = useProductoInfo({ productos })
-	const { cantidadProductos, handleClickCantidadProductos } = operarProductos()
+	const { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantdad, handleClickQuitarCantidad, total } = operarProductos()
 
 	return (
 		<>
@@ -29,7 +29,7 @@ function App() {
 				<Route path="/productos" element={<Productos handleClickAgregar={handleClickCantidadProductos} productos={productos} detalles={detalles} handleClick={handleClick} />} />
 				<Route path="/conocenos" element={<Conocenos />} />
 				<Route path="/galeria" element={<Galeria />} />
-				<Route path="/carrito" element={<Carrito />} />
+				<Route path="/carrito" element={<Carrito carrito={carrito} handleClickAgregarCantdad={handleClickAgregarCantdad} handleClickQuitarCantidad={handleClickQuitarCantidad} total={total} />} />
 			</Routes>
 			{detalles && <DetallesProducto detalles={detalles} handleClickRemove={handleClickRemove} />}
 		</>
