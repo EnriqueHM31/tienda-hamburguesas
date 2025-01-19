@@ -3,6 +3,7 @@ import { GALERIA } from '../utils/constantes.js'
 export default function Galeria() {
 	return (
 		<section id="galeria" className="galeria">
+			<h2>Nuestra Galeria</h2>
 			<div className="galeria-img">
 				{GALERIA.map(({ id, url, alt }) => {
 					return (
