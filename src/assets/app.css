@@ -60,20 +60,12 @@ body {
     color: var(--blanco);
 }
 
-.header-app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100dvh;
-}
-
 .nav-app {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     animation: TranslacionYtop .8s ease forwards;
     z-index: 100;
     background: var(--negro);
@@ -185,9 +177,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100dvh;
+    height: 100dvh;
     width: 90%;
-    margin-top: 3rem;
+    padding-top: 4rem;
+    margin: 0 auto;
 }
 
 .contenedor-header {
@@ -331,84 +324,7 @@ body {
 
 
 
-/* CONOCENOS*/
-
-.seccion-conocenos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100dvh;
-    margin-top: 3rem;
-    width: 100%;
-    gap: 4rem;
-    view-timeline-name: --conocenos;
-}
-
-.imagen-conocenos {
-    width: 50%;
-    view-timeline-axis: block;
-    animation-timeline: --conocenos;
-    animation-range: entry -5% cover 40%;
-    animation-name: translacionrightseccion;
-    animation-fill-mode: both;
-    overflow: hidden;
-    position: relative;
-}
-
-.imagen-conocenos::after {
-    font-size: clamp(1rem, 4vw, 3.5rem);
-    position: absolute;
-    content: 'Damos lo mejor para nuestros clientes';
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    text-align: center;
-    inset: 0;
-    padding-bottom: 4rem;
-    background: linear-gradient(transparent, var(--negro) 90%);
-    transform: translateY(40rem);
-    transition: transform .6s;
-}
-
-.imagen-conocenos img {
-    width: 100%;
-    height: auto;
-    transition: filter .6s;
-    transition-delay: .4s;
-}
-
-.imagen-conocenos:hover img {
-    filter: contrast(1.5);
-}
-
-.imagen-conocenos:hover::after {
-    transform: translateY(0);
-}
-
-.contenido-conocenos {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    width: 40%;
-    padding: 0 3rem;
-    view-timeline-axis: block;
-    animation-timeline: --conocenos;
-    animation-range: entry -5% cover 40%;
-    animation-name: translacionleftseccion;
-    animation-fill-mode: both;
-}
-
-.contenido-conocenos h2 {
-    font-size: clamp(1rem, 4vw, 5.2rem);
-    color: var(--blanco);
-}
-
-.contenido-conocenos p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: var(--blanco);
-    text-shadow: 0 0 1rem var(--rojo);
-    line-height: 1.5;
-}
+/*PRODUCTOS*/
 
 .lista-productos {
     display: grid;
@@ -416,12 +332,12 @@ body {
     gap: 5rem;
     max-width: 85%;
     margin: 0 auto;
+    margin-top: 10rem;
     padding: 5rem 0;
 }
 
 .item-productos {
     width: 100%;
-
 }
 
 .producto {
@@ -633,6 +549,76 @@ body {
     color: var(--blanco);
 }
 
+/* CONOCENOS*/
+
+.seccion-conocenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    margin-top: 3rem;
+    width: 100%;
+    gap: 4rem;
+    overflow: hidden;
+}
+
+.imagen-conocenos {
+    width: 50%;
+    view-timeline-axis: block;
+    animation: translacionleftseccion 1s ease forwards;
+}
+
+.imagen-conocenos::after {
+    font-size: clamp(1rem, 4vw, 3.5rem);
+    position: absolute;
+    content: 'Damos lo mejor para nuestros clientes';
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    inset: 0;
+    padding-bottom: 4rem;
+    background: linear-gradient(transparent, var(--negro) 90%);
+    transform: translateY(40rem);
+    transition: transform .6s;
+}
+
+.imagen-conocenos img {
+    width: 100%;
+    height: auto;
+    transition: filter .6s;
+    transition-delay: .4s;
+}
+
+.imagen-conocenos:hover img {
+    filter: contrast(1.5);
+}
+
+.imagen-conocenos:hover::after {
+    transform: translateY(0);
+}
+
+.contenido-conocenos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 40%;
+    padding: 0 3rem;
+    animation: translacionrightseccion 1s ease forwards;
+}
+
+.contenido-conocenos h2 {
+    font-size: clamp(1rem, 4vw, 5.2rem);
+    color: var(--blanco);
+}
+
+.contenido-conocenos p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--blanco);
+    text-shadow: 0 0 1rem var(--rojo);
+    line-height: 1.5;
+}
+
 
 /*** GALERIA ***/
 
@@ -641,24 +627,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
-    padding: 4rem 0;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.galeria h2 {
-    font-size: clamp(1.2rem, 4vw, 4rem);
-    text-align: center;
-    padding: 3rem 0;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
 }
 
 
 .galeria-img {
     display: grid;
     width: 100%;
+    height: auto;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 13rem 17rem 13rem 17rem;
+    grid-template-rows: 10rem 14rem 10rem 14rem;
     align-items: center;
     justify-items: center;
     gap: 2rem;
@@ -672,6 +656,7 @@ body {
     background: red;
     position: relative;
     overflow: hidden;
+    animation: scaleseccion 1s ease forwards;
 }
 
 .galeria-img-item::after {
@@ -738,6 +723,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform .6s;
+    animation: opacity 2s ease forwards;
+
 }
 
 .logo-grid:hover {
@@ -824,20 +811,34 @@ body {
 
 @keyframes translacionleftseccion {
     from {
-        transform: translateX(-40rem);
+        transform: translateX(-60rem);
+        opacity: 0;
     }
 
     to {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
 @keyframes translacionrightseccion {
     from {
-        transform: translateX(40rem);
+        transform: translateX(60rem);
+        opacity: 0;
     }
 
     to {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
