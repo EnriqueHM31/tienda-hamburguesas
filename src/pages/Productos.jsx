@@ -4,7 +4,13 @@ export default function Productos({ productos, handleClick, handleClickAgregar }
 	return (
 		<>
 			<ul id="productos" className="lista-productos">
-				{productos.map(({ id, nombre, precio }) => {
+				{productos.map(({ id, nombre, precio, descripcion }) => {
+					const data = {
+						id,
+						nombre,
+						precio,
+						descripcion,
+					}
 					return (
 						<li key={id} className="item-producto">
 							<article className="producto">
@@ -18,7 +24,7 @@ export default function Productos({ productos, handleClick, handleClickAgregar }
 										</button>
 									</div>
 								</div>
-								<button onClick={() => handleClickAgregar(id)} className="btn-header btn-agregar">
+								<button onClick={() => handleClickAgregar(data)} className="btn-header btn-agregar">
 									Agregar
 								</button>
 							</article>
