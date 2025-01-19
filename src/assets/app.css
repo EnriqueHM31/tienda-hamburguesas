@@ -336,10 +336,6 @@ body {
     padding: 5rem 0;
 }
 
-.item-productos {
-    width: 100%;
-}
-
 .producto {
     display: flex;
     flex-direction: column;
@@ -454,28 +450,32 @@ body {
     justify-content: center;
     gap: 3rem;
     width: 80%;
-    min-height: 70dvh;
-    padding: 5rem;
+    min-height: 75dvh;
     border-radius: 1rem;
     box-shadow: 0 0 1rem var(--rojo);
     position: relative;
+    padding: 2rem;
 }
 
 .contenedor-informacion-detalles {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
 }
 
 .img-detalle {
     min-width: 50%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .img-detalle img {
-    width: 50%;
-    height: auto;
+    width: 80%;
+    height: 40dvh;
     object-fit: contain;
 }
 
@@ -484,7 +484,6 @@ body {
     font-weight: bold;
     line-height: 1.5;
     text-align: center;
-    padding: 3rem 0;
 }
 
 .contenido-detalles {
@@ -504,6 +503,7 @@ body {
     background-color: var(--rojo);
     color: var(--blanco);
     text-align: center;
+    max-width: 80%;
 }
 
 .contenido-detalles p {
@@ -690,8 +690,6 @@ body {
     grid-row: span 2;
 }
 
-
-
 .galeria-7 {
     grid-row: span 2;
 }
@@ -729,6 +727,171 @@ body {
 
 .logo-grid:hover {
     transform: translate(-50%, -50%) scale(1.4);
+}
+
+
+
+/* CARRITO DE COMPRAS */
+
+.page {
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-bottom: 10rem;
+}
+
+.page h1 {
+    font-size: clamp(1.2rem, 4vw, 4rem);
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.producto-elegido {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: .1rem solid var(--rojo);
+}
+
+.producto-elegido img {
+    width: 10%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.contenido-producto-elegido {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contenedor-contenido-producto-elegido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.contenedor-contenido-producto-elegido h2 {
+    font-size: clamp(1.2rem, 4vw, 3rem);
+    font-weight: bold;
+}
+
+.contenedor-contenido-producto-elegido span {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: bold;
+    background: var(--blanco);
+    color: var(--rojo);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.contenido-producto-elegido p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.cantidad-producto {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cantidad-producto span {
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: bold;
+    background: var(--rojo);
+    color: var(--blanco);
+    padding: 1.5rem 2rem;
+    border-radius: 50%;
+}
+
+.contenedor-btn-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contenedor-btn-cantidad button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-btn-cantidad button img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
+.pago-total {
+    background-color: var(--blanco);
+    color: var(--negro);
+    max-width: 80%;
+    width: 100%;
+    border-radius: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.contenido-pago {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.contenido-pago h2 {
+    font-size: clamp(1.2rem, 4vw, 3rem);
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenido-pago span {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: bold;
+    color: var(--rojo);
+    padding: 1rem 2rem;
+}
+
+.pago-total button {
+    padding: 1rem 2rem;
+    background: var(--rojo);
+    color: var(--blanco);
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
 }
 
 
