@@ -1,8 +1,20 @@
 import IconoInformacionProducto from '../components/icon/Icono-información'
 
-export default function Productos({ productos, handleClick, handleClickAgregar }) {
+export default function Productos({ productos, categorias, handleClick, handleClickAgregar, handleClickCategoria }) {
 	return (
-		<>
+		<div className="page page-productos">
+			<div className="seccion-categorias">
+				<h2>Categorias</h2>
+				<div className="btn-categorias">
+					{categorias.map(({ id, nombre, check }) => {
+						return (
+							<button key={id} onClick={() => handleClickCategoria(id)} style={{ borderBottom: check ? '.3rem solid var(--rojo)' : 'none' }}>
+								{nombre}
+							</button>
+						)
+					})}
+				</div>
+			</div>
 			<ul id="productos" className="lista-productos">
 				{productos.map(({ id, nombre, precio, descripcion }) => {
 					const data = {
@@ -32,6 +44,6 @@ export default function Productos({ productos, handleClick, handleClickAgregar }
 					)
 				})}
 			</ul>
-		</>
+		</div>
 	)
 }
