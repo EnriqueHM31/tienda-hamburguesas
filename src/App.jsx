@@ -41,7 +41,10 @@ function App() {
 				/>
 				<Route path="/conocenos" element={<Conocenos />} />
 				<Route path="/galeria" element={<Galeria />} />
-				<Route path="/carrito" element={<Carrito carrito={carrito} handleClickAgregarCantdad={handleClickAgregarCantidad} handleClickQuitarCantidad={handleClickQuitarCantidad} total={total} />} />
+				<Route
+					path="/carrito"
+					element={<Carrito carrito={carrito} handleClickAgregarCantidad={handleClickAgregarCantidad} handleClickQuitarCantidad={handleClickQuitarCantidad} total={total} />}
+				/>
 			</Routes>
 			{detalles && <DetallesProducto detalles={detalles} handleClickRemove={handleClickRemove} />}
 		</>
