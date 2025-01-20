@@ -23,7 +23,7 @@ export default function operarProductos() {
 		actualizar(productos)
 	}
 
-	const handleClickAgregarCantdad = (id) => {
+	const handleClickAgregarCantidad = (id) => {
 		const index = carrito.findIndex((producto) => producto.id === id)
 
 		const newCarrito = [...carrito]
@@ -55,5 +55,5 @@ export default function operarProductos() {
 		setTotal(getTotal(productos))
 	}
 
-	return { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantdad, handleClickQuitarCantidad, total }
+	return { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantidad, handleClickQuitarCantidad, total }
 }
