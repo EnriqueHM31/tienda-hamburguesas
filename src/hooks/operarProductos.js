@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 export default function operarProductos() {
-	const cantidad = localStorage.getItem('productos') === null ? 0 : getTotalCantidad(JSON.parse(localStorage.getItem('productos')))
-	const [cantidadProductos, setCantidadProductos] = useState(cantidad)
 	const productos = localStorage.getItem('productos') === null ? [] : JSON.parse(localStorage.getItem('productos'))
+
+	const [cantidadProductos, setCantidadProductos] = useState(productos.length)
 	const [carrito, setCarrito] = useState(productos)
 	const [total, setTotal] = useState(getTotal(productos))
 
@@ -12,8 +12,6 @@ export default function operarProductos() {
 
 		let productos = JSON.parse(localStorage.getItem('productos')) || []
 
-		console.log(productos.item)
-
 		const index = productos.findIndex((producto) => producto.id === id)
 		if (index === -1) {
 			productos.push({ id, precio, nombre, descripcion, cantidad: 1 })
@@ -21,10 +19,7 @@ export default function operarProductos() {
 			productos[index].cantidad++
 		}
 
-		localStorage.setItem('productos', JSON.stringify(productos))
-		setCarrito(productos)
-		setCantidadProductos(getTotalCantidad(productos))
-		setTotal(getTotal(productos))
+		actualizar(productos)
 	}
 
 	const handleClickAgregarCantdad = (id) => {
@@ -36,14 +31,7 @@ export default function operarProductos() {
 		// Asegurarse de que el producto existe antes de modificar la cantidad
 		newCarrito[index].cantidad++
 
-		localStorage.setItem('productos', JSON.stringify(newCarrito))
-
-		// Actualizar el estado
-		setCarrito(newCarrito)
-
-		// Actualizar la cantidad total de productos
-		setCantidadProductos(getTotalCantidad(newCarrito))
-		setTotal(getTotal(newCarrito))
+		actualizar(newCarrito)
 	}
 
 	const handleClickQuitarCantidad = (id) => {
@@ -58,26 +46,21 @@ export default function operarProductos() {
 			// Paso 2: Filtrar el producto que queremos eliminar (por id)
 			productos = productos.filter((producto) => producto.id !== id)
 
-			// Paso 3: Guardar de nuevo el array filtrado en localStorage
-			localStorage.setItem('productos', JSON.stringify(productos))
-			setCarrito(productos)
-			setCantidadProductos(getTotalCantidad(productos))
-			setTotal(getTotal(productos))
+			actualizar(productos)
 			return
 		}
 
 		newCarrito[index].cantidad--
-		localStorage.setItem('productos', JSON.stringify(newCarrito))
 
-		// Actualizar el estado
-		setCarrito(newCarrito)
-
-		// Actualizar la cantidad total de productos
-		setCantidadProductos(getTotalCantidad(newCarrito))
-		setTotal(getTotal(newCarrito))
+		actualizar(newCarrito)
 	}
 
-	// Actualizar localStorage
+	const actualizar = (productos) => {
+		localStorage.setItem('productos', JSON.stringify(productos))
+		setCarrito(productos)
+		setCantidadProductos(getTotalCantidad(productos))
+		setTotal(getTotal(productos))
+	}
 
 	return { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantdad, handleClickQuitarCantidad, total }
 }
