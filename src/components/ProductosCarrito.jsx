@@ -1,9 +1,6 @@
-function ProductoCarrito({ carrito, handleClickAgregarCantidad, handleClickQuitarCantidad }) {
-	console.log(carrito)
-	const productosCarrito = carrito.carrito
-	const handleAgregar = carrito.handleClickAgregarCantidad
-	const handleQuitar = carrito.handleClickQuitarCantidad
-	return productosCarrito.map(({ id, nombre, precio, descripcion, cantidad }) => {
+function ProductoCarrito({ dataProductos }) {
+	const { carrito } = dataProductos
+	return carrito.map(({ id, nombre, precio, descripcion, cantidad }) => {
 		return (
 			<article className="producto-elegido" key={id}>
 				<img src={`/src/assets/img/menu/menu${id}.webp`} alt={nombre} />
@@ -16,30 +13,34 @@ function ProductoCarrito({ carrito, handleClickAgregarCantidad, handleClickQuita
 					<p className="precio-producto-elegido">{descripcion}</p>
 				</div>
 
-				<div className="cantidad-producto">
-					<span>{cantidad}</span>
-					<div className="contenedor-btn-cantidad">
-						<button onClick={() => handleAgregar(id)} className="btn-agregar">
-							<img src="./src/assets/img/ic_agregar.webp" alt="icono para agregar" />
-						</button>
-						<button onClick={() => handleQuitar(id)} className="btn-quitar">
-							<img src="./src/assets/img/ic_quitar.webp" alt="icono para quitar" />
-						</button>
-					</div>
-				</div>
+				<BotonesAgregarQuitarCantidad dataProductos={dataProductos} id={id} cantidad={cantidad} />
 			</article>
 		)
 	})
+}
+
+export function BotonesAgregarQuitarCantidad({ dataProductos, id, cantidad }) {
+	const { handleClickAgregarCantidad, handleClickQuitarCantidad } = dataProductos
+	return (
+		<div className="cantidad-producto">
+			<span>{cantidad}</span>
+			<div className="contenedor-btn-cantidad">
+				<button onClick={() => handleClickAgregarCantidad(id)} className="btn-agregar">
+					<img src="./src/assets/img/ic_agregar.webp" alt="icono para agregar" />
+				</button>
+				<button onClick={() => handleClickQuitarCantidad(id)} className="btn-quitar">
+					<img src="./src/assets/img/ic_quitar.webp" alt="icono para quitar" />
+				</button>
+			</div>
+		</div>
+	)
 }
 
 function SinProductos() {
 	return <p className="sin-productos">No tienes productos en tu carrito</p>
 }
 
-export default function ProductosCarrito(carrito, handleClickAgregarCantidad, handleClickQuitarCantidad) {
-	return carrito.length !== 0 ? (
-		<ProductoCarrito carrito={carrito} handleClickAgregarCantidad={handleClickAgregarCantidad} handleClickQuitarCantidad={handleClickQuitarCantidad} />
-	) : (
-		<SinProductos />
-	)
+export default function ProductosCarrito({ dataProductos }) {
+	const carrito = dataProductos.carrito
+	return carrito.length !== 0 ? <ProductoCarrito dataProductos={dataProductos} /> : <SinProductos />
 }
