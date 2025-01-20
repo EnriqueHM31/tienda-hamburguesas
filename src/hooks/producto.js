@@ -20,7 +20,6 @@ export default function useProducto() {
 				? Menu // Si la categoría seleccionada es 'Todos', mostrar todos los productos
 				: Menu.filter((item) => item.categoria === categoriaSeleccionada?.nombre)
 
-		console.log(filteredProductos)
 		// Actualizar el estado de productos y las categorías
 		setCategorias(updatedCategorias)
 		setProductos(filteredProductos)
