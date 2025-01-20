@@ -1,5 +1,8 @@
 function ProductoCarrito({ carrito, handleClickAgregarCantidad, handleClickQuitarCantidad }) {
+	console.log(carrito)
 	const productosCarrito = carrito.carrito
+	const handleAgregar = carrito.handleClickAgregarCantidad
+	const handleQuitar = carrito.handleClickQuitarCantidad
 	return productosCarrito.map(({ id, nombre, precio, descripcion, cantidad }) => {
 		return (
 			<article className="producto-elegido" key={id}>
@@ -16,10 +19,10 @@ function ProductoCarrito({ carrito, handleClickAgregarCantidad, handleClickQuita
 				<div className="cantidad-producto">
 					<span>{cantidad}</span>
 					<div className="contenedor-btn-cantidad">
-						<button onClick={() => handleClickAgregarCantidad(id)} className="btn-agregar">
+						<button onClick={() => handleAgregar(id)} className="btn-agregar">
 							<img src="./src/assets/img/ic_agregar.webp" alt="icono para agregar" />
 						</button>
-						<button onClick={() => handleClickQuitarCantidad(id)} className="btn-quitar">
+						<button onClick={() => handleQuitar(id)} className="btn-quitar">
 							<img src="./src/assets/img/ic_quitar.webp" alt="icono para quitar" />
 						</button>
 					</div>
@@ -34,5 +37,9 @@ function SinProductos() {
 }
 
 export default function ProductosCarrito(carrito, handleClickAgregarCantidad, handleClickQuitarCantidad) {
-	return carrito.length !== 0 ? <ProductoCarrito carrito={carrito} handleClickAgregarCantidad={handleClickAgregarCantidad} handleClickQuitarCantidad={handleClickQuitarCantidad} /> : <SinProductos />
+	return carrito.length !== 0 ? (
+		<ProductoCarrito carrito={carrito} handleClickAgregarCantidad={handleClickAgregarCantidad} handleClickQuitarCantidad={handleClickQuitarCantidad} />
+	) : (
+		<SinProductos />
+	)
 }
