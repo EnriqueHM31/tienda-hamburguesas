@@ -16,6 +16,14 @@ export const IMAGENES_SLIDER = [
 	{ id: 3, url: '../src/assets/img/slider/hamburguesa3.webp', alt: 'Imagen de la especialidad de la tienda Hamburguesa Mega', precio: '180', check: false },
 ]
 
+export const CATEGORIAS = [
+	{ id: 1, nombre: 'Todo', check: true },
+	{ id: 2, nombre: 'Hamburguesa', check: false },
+	{ id: 3, nombre: 'Burritos', check: false },
+	{ id: 4, nombre: 'Papas Fritas', check: false },
+	{ id: 5, nombre: 'Bebidas', check: false },
+]
+
 export const SOBRE_NOSOTROS = [
 	'En Tienda Mega, nos apasiona ofrecer una experiencia única para los amantes de las hamburguesas. Desde el primer bocado, nuestro objetivo es sorprenderte con sabores auténticos y frescos. Trabajamos con ingredientes de alta calidad, seleccionados cuidadosamente para crear combinaciones deliciosas que satisfacen todos los gustos. ',
 ]
