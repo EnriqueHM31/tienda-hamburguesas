@@ -153,11 +153,11 @@ export const productos = [
 	},
 	{
 		id: 20,
-		nombre: 'Papas Fritas Clásicas',
+		nombre: 'Burrito Express',
 		precio: 50,
-		ingredientes: ['Papas', 'Aceite', 'Sal'],
-		descripcion: 'Papas fritas crujientes, saladas al gusto.',
-		categoria: 'Papas Fritas',
+		ingredientes: ['Tortilla', 'Carne de res', 'Queso', 'Lechuga', 'Salsa', 'Tomate'],
+		descripcion: 'Burrito con carne de res, queso, lechuga y salsa.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 21,
