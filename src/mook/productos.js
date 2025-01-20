@@ -5,6 +5,7 @@ export const productos = [
 		precio: 90,
 		ingredientes: ['Pan', 'Carne de res', 'Queso', 'Lechuga', 'Tomate', 'Mayonesa'],
 		descripcion: 'Hamburguesa clásica con carne de res, queso cheddar, lechuga fresca y tomate.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 2,
@@ -12,6 +13,7 @@ export const productos = [
 		precio: 110,
 		ingredientes: ['Pan', 'Carne de res', 'Queso cheddar', 'Cebolla caramelizada', 'Salsa barbacoa', 'Lechuga'],
 		descripcion: 'Hamburguesa con salsa barbacoa, cebolla caramelizada y queso cheddar.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 3,
@@ -19,6 +21,7 @@ export const productos = [
 		precio: 120,
 		ingredientes: ['Pan', 'Hamburguesa de vegetales', 'Lechuga', 'Tomate', 'Mayonesa vegana'],
 		descripcion: 'Una opción sin carne con hamburguesa de vegetales, ideal para veganos.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 4,
@@ -26,6 +29,7 @@ export const productos = [
 		precio: 150,
 		ingredientes: ['Pan', 'Carne de res', 'Queso cheddar', 'Bacon', 'Huevo frito', 'Lechuga', 'Tomate'],
 		descripcion: 'Hamburguesa de lujo con bacon crujiente, huevo frito y queso cheddar.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 5,
@@ -33,6 +37,7 @@ export const productos = [
 		precio: 170,
 		ingredientes: ['Pan', 'Carne de res', 'Queso suizo', 'Piña', 'Jamón', 'Mayonesa'],
 		descripcion: 'Hamburguesa con piña a la parrilla y jamón, todo en un pan suave.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 6,
@@ -40,6 +45,7 @@ export const productos = [
 		precio: 130,
 		ingredientes: ['Pan', 'Carne de res', 'Queso cheddar', 'Jalapeños', 'Salsa picante'],
 		descripcion: 'Hamburguesa con un toque picante gracias a los jalapeños y la salsa picante.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 7,
@@ -47,6 +53,7 @@ export const productos = [
 		precio: 120,
 		ingredientes: ['Pan', 'Carne de res', 'Queso cheddar', 'Guacamole', 'Cebolla morada', 'Lechuga'],
 		descripcion: 'Hamburguesa con guacamole, cebolla morada y un toque de queso cheddar.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 8,
@@ -54,6 +61,7 @@ export const productos = [
 		precio: 190,
 		ingredientes: ['Pan', 'Carne de res', 'Queso cheddar', 'Bacon', 'Lechuga', 'Mayonesa'],
 		descripcion: 'Hamburguesa con queso cheddar fundido y crujiente bacon.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 9,
@@ -61,6 +69,7 @@ export const productos = [
 		precio: 145,
 		ingredientes: ['Pan', 'Carne de res', 'Queso suizo', 'Setas', 'Salsa de mostaza'],
 		descripcion: 'Hamburguesa con setas salteadas y queso suizo derretido.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 10,
@@ -68,6 +77,7 @@ export const productos = [
 		precio: 155,
 		ingredientes: ['Pan', 'Carne de res', 'Queso cheddar', 'Guacamole', 'Salsa de chipotle'],
 		descripcion: 'Hamburguesa con guacamole, salsa chipotle y queso cheddar.',
+		categoria: 'Hamburguesa',
 	},
 	{
 		id: 11,
@@ -75,6 +85,7 @@ export const productos = [
 		precio: 50,
 		ingredientes: ['Tortilla', 'Carne de res', 'Arroz', 'Frijoles', 'Lechuga', 'Queso cheddar', 'Salsa'],
 		descripcion: 'Burrito clásico con carne de res, arroz y frijoles.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 12,
@@ -82,6 +93,7 @@ export const productos = [
 		precio: 60,
 		ingredientes: ['Tortilla', 'Arroz', 'Frijoles', 'Aguacate', 'Lechuga', 'Tomate', 'Salsa'],
 		descripcion: 'Burrito vegetariano con frijoles, arroz, aguacate y salsa fresca.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 13,
@@ -89,6 +101,7 @@ export const productos = [
 		precio: 55,
 		ingredientes: ['Tortilla', 'Carne de pollo', 'Arroz', 'Jalapeños', 'Salsa picante', 'Queso cheddar'],
 		descripcion: 'Burrito con pollo, jalapeños y salsa picante.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 14,
@@ -96,6 +109,7 @@ export const productos = [
 		precio: 70,
 		ingredientes: ['Tortilla', 'Carne de res', 'Salsa barbacoa', 'Arroz', 'Queso', 'Tomate'],
 		descripcion: 'Burrito con carne de res, salsa barbacoa y arroz.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 15,
@@ -103,6 +117,7 @@ export const productos = [
 		precio: 80,
 		ingredientes: ['Tortilla', 'Carne de res', 'Arroz', 'Frijoles negros', 'Guacamole', 'Queso cheddar', 'Sour cream'],
 		descripcion: 'Burrito supreme con carne, guacamole, frijoles negros y sour cream.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 16,
@@ -110,6 +125,7 @@ export const productos = [
 		precio: 65,
 		ingredientes: ['Tortilla', 'Carne de res', 'Lechuga', 'Tomate', 'Queso cheddar', 'Salsa'],
 		descripcion: 'Burrito inspirado en los tacos, con carne de res, lechuga y salsa.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 17,
@@ -117,6 +133,7 @@ export const productos = [
 		precio: 65,
 		ingredientes: ['Tortilla', 'Pollo', 'Arroz', 'Lechuga', 'Salsa', 'Queso'],
 		descripcion: 'Burrito con pollo tierno, arroz y salsa fresca.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 18,
@@ -124,6 +141,7 @@ export const productos = [
 		precio: 100,
 		ingredientes: ['Tortilla', 'Mariscos', 'Arroz', 'Guacamole', 'Lechuga', 'Salsa de chipotle'],
 		descripcion: 'Burrito con mariscos frescos, guacamole y salsa de chipotle.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 19,
@@ -131,6 +149,7 @@ export const productos = [
 		precio: 85,
 		ingredientes: ['Tortilla', 'Carne de res', 'Jalapeños', 'Queso', 'Tomate', 'Lechuga'],
 		descripcion: 'Burrito loco con carne, jalapeños y mucho queso.',
+		categoria: 'Burritos',
 	},
 	{
 		id: 20,
@@ -138,6 +157,7 @@ export const productos = [
 		precio: 50,
 		ingredientes: ['Papas', 'Aceite', 'Sal'],
 		descripcion: 'Papas fritas crujientes, saladas al gusto.',
+		categoria: 'Papas Fritas',
 	},
 	{
 		id: 21,
@@ -145,6 +165,7 @@ export const productos = [
 		precio: 60,
 		ingredientes: ['Papas', 'Aceite', 'Queso cheddar', 'Salsa de queso'],
 		descripcion: 'Papas fritas cubiertas con queso cheddar fundido.',
+		categoria: 'Papas Fritas',
 	},
 	{
 		id: 22,
@@ -152,6 +173,7 @@ export const productos = [
 		precio: 65,
 		ingredientes: ['Papas', 'Aceite', 'Bacon', 'Queso cheddar', 'Salsa BBQ'],
 		descripcion: 'Papas fritas con bacon crujiente y salsa BBQ.',
+		categoria: 'Papas Fritas',
 	},
 	{
 		id: 23,
@@ -159,6 +181,7 @@ export const productos = [
 		precio: 60,
 		ingredientes: ['Papas', 'Aceite', 'Jalapeños', 'Salsa picante'],
 		descripcion: 'Papas fritas con un toque de jalapeños y salsa picante.',
+		categoria: 'Papas Fritas',
 	},
 	{
 		id: 24,
@@ -166,6 +189,7 @@ export const productos = [
 		precio: 70,
 		ingredientes: ['Papas', 'Aceite', 'Queso cheddar', 'Bacon', 'Sour cream'],
 		descripcion: 'Papas fritas deluxe con queso, bacon y sour cream.',
+		categoria: 'Papas Fritas',
 	},
 	{
 		id: 25,
@@ -173,6 +197,7 @@ export const productos = [
 		precio: 25,
 		ingredientes: ['Agua carbonatada', 'Azúcar', 'Colorante', 'Saborizante'],
 		descripcion: 'Bebida cola refrescante y deliciosa.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 26,
@@ -180,6 +205,7 @@ export const productos = [
 		precio: 25,
 		ingredientes: ['Agua', 'Jugo de limón', 'Azúcar'],
 		descripcion: 'Bebida refrescante con jugo de limón natural.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 27,
@@ -187,6 +213,7 @@ export const productos = [
 		precio: 30,
 		ingredientes: ['Agua', 'Jugo de naranja', 'Azúcar'],
 		descripcion: 'Bebida refrescante de jugo de naranja natural.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 28,
@@ -194,6 +221,7 @@ export const productos = [
 		precio: 20,
 		ingredientes: ['Agua', 'Azúcar', 'Cafeína', 'Saborizantes'],
 		descripcion: 'Bebida energética con un toque refrescante.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 29,
@@ -201,6 +229,7 @@ export const productos = [
 		precio: 30,
 		ingredientes: ['Agua', 'Té', 'Azúcar', 'Saborizantes'],
 		descripcion: 'Té helado refrescante con un toque dulce.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 30,
@@ -208,6 +237,7 @@ export const productos = [
 		precio: 35,
 		ingredientes: ['Agua', 'Saborizante de fresa', 'Azúcar'],
 		descripcion: 'Bebida fresca con sabor a fresa natural.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 31,
@@ -215,6 +245,7 @@ export const productos = [
 		precio: 25,
 		ingredientes: ['Agua carbonatada', 'Azúcar', 'Colorante caramelo E150d', 'Ácido fosfórico', 'Aroma natural', 'Cafeína'],
 		descripcion: 'Refresco carbonatado de cola con un sabor único.',
+		categoria: 'Bebidas',
 	},
 	{
 		id: 32,
@@ -222,5 +253,6 @@ export const productos = [
 		precio: 25,
 		ingredientes: ['Agua mineral natural'],
 		descripcion: 'Agua mineral natural proveniente de los Alpes franceses, rica en minerales.',
+		categoria: 'Bebidas',
 	},
 ]
