@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { eliminarProductoCarrito, getTotal, getTotalCantidad } from '../utils/funciones'
 
 export default function operarProductos() {
 	const productos = localStorage.getItem('productos') === null ? [] : JSON.parse(localStorage.getItem('productos'))
@@ -25,10 +26,8 @@ export default function operarProductos() {
 	const handleClickAgregarCantdad = (id) => {
 		const index = carrito.findIndex((producto) => producto.id === id)
 
-		// Crear una copia del carrito para evitar mutar el estado directamente
 		const newCarrito = [...carrito]
 
-		// Asegurarse de que el producto existe antes de modificar la cantidad
 		newCarrito[index].cantidad++
 
 		actualizar(newCarrito)
@@ -37,21 +36,15 @@ export default function operarProductos() {
 	const handleClickQuitarCantidad = (id) => {
 		const index = carrito.findIndex((producto) => producto.id === id)
 
-		// Crear una copia del carrito para evitar mutar el estado directamente
 		const newCarrito = [...carrito]
 
 		if (newCarrito[index].cantidad === 1) {
-			let productos = JSON.parse(localStorage.getItem('productos')) || []
-
-			// Paso 2: Filtrar el producto que queremos eliminar (por id)
-			productos = productos.filter((producto) => producto.id !== id)
-
+			const productos = eliminarProductoCarrito(id)
 			actualizar(productos)
 			return
 		}
 
 		newCarrito[index].cantidad--
-
 		actualizar(newCarrito)
 	}
 
@@ -63,12 +56,4 @@ export default function operarProductos() {
 	}
 
 	return { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantdad, handleClickQuitarCantidad, total }
-}
-
-export const getTotalCantidad = (productos) => {
-	return productos.reduce((acum, producto) => acum + producto.cantidad, 0)
-}
-
-export const getTotal = (productos) => {
-	return productos.reduce((acum, producto) => acum + producto.precio * producto.cantidad, 0)
 }
