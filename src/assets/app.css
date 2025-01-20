@@ -1026,7 +1026,7 @@ body {
 
 @keyframes scaleseccion {
     from {
-        scale: 0;
+        scale: 0.01;
     }
 
     to {
@@ -1038,7 +1038,7 @@ body {
 @keyframes translacionleftseccion {
     from {
         transform: translateX(-60rem);
-        opacity: 0;
+        opacity: 0.01;
     }
 
     to {
@@ -1050,7 +1050,7 @@ body {
 @keyframes translacionrightseccion {
     from {
         transform: translateX(60rem);
-        opacity: 0;
+        opacity: 0.01;
     }
 
     to {
@@ -1061,7 +1061,7 @@ body {
 
 @keyframes opacity {
     from {
-        opacity: 0;
+        opacity: 0.01;
     }
 
     to {
