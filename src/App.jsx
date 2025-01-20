@@ -16,7 +16,7 @@ import operarProductos from './hooks/operarProductos.js'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
-	const { productos } = useProducto()
+	const { productos, categorias, handleClickCategoria } = useProducto()
 	const { detalles, handleClick, handleClickRemove } = useProductoInfo({ productos })
 	const { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantdad, handleClickQuitarCantidad, total } = operarProductos()
 
@@ -26,7 +26,19 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<Header />} />
-				<Route path="/productos" element={<Productos handleClickAgregar={handleClickCantidadProductos} productos={productos} detalles={detalles} handleClick={handleClick} />} />
+				<Route
+					path="/productos"
+					element={
+						<Productos
+							categorias={categorias}
+							handleClickCategoria={handleClickCategoria}
+							handleClickAgregar={handleClickCantidadProductos}
+							productos={productos}
+							detalles={detalles}
+							handleClick={handleClick}
+						/>
+					}
+				/>
 				<Route path="/conocenos" element={<Conocenos />} />
 				<Route path="/galeria" element={<Galeria />} />
 				<Route path="/carrito" element={<Carrito carrito={carrito} handleClickAgregarCantdad={handleClickAgregarCantdad} handleClickQuitarCantidad={handleClickQuitarCantidad} total={total} />} />
