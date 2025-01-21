@@ -963,13 +963,34 @@ body {
     color: var(--blanco);
     border: .1rem solid var(--blanco);
     font-size: clamp(1.4rem, 4vw, 2rem);
-
+    position: relative;
 }
 
 .contenido-formulario input:focus,
 .contenido-formulario textarea:focus {
     outline: .4rem solid var(--rojo);
     border: none;
+}
+
+.contenido-formulario textarea {
+    resize: none;
+    min-height: 10rem;
+}
+
+.formulario textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.formulario input:invalid,
+.formulario textarea:invalid {
+    color: var(--rojo);
+}
+
+.formulario input:valid,
+.formulario textarea:valid {
+    color: rgb(0, 255, 0);
+    outline: .1rem solid rgb(0, 255, 0);
+    border: .1rem solid rgb(0, 255, 0);
 }
 
 .contenido-formulario button {
