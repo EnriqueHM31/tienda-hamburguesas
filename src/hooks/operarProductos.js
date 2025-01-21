@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { eliminarProductoCarrito, getTotal, getTotalCantidad } from '../utils/funciones'
 
-export default function operarProductos() {
+export default function useOperarProductos() {
 	const productos = localStorage.getItem('productos') === null ? [] : JSON.parse(localStorage.getItem('productos'))
 
-	const [cantidadProductos, setCantidadProductos] = useState(productos.length)
+	const [cantidadProductos, setCantidadProductos] = useState(getTotalCantidad(productos))
 	const [carrito, setCarrito] = useState(productos)
 	const [total, setTotal] = useState(getTotal(productos))
 
