@@ -11,14 +11,18 @@ import Galeria from './pages/Galeria.jsx'
 //HOOOKS
 import useProducto from './hooks/producto'
 import useProductoInfo from './hooks/productoInfo.js'
-import operarProductos from './hooks/operarProductos.js'
+import useOperarProductos from './hooks/operarProductos.js'
+import useDocument from './hooks/documento.js'
 //Navegacion
 import { Routes, Route } from 'react-router-dom'
 
-function App() {
+export default function App() {
 	const { productos, categorias, handleClickCategoria } = useProducto()
 	const { detalles, handleClick, handleClickRemove } = useProductoInfo({ productos })
-	const { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantidad, handleClickQuitarCantidad, total } = operarProductos()
+	const { cantidadProductos, handleClickCantidadProductos, carrito, handleClickAgregarCantidad, handleClickQuitarCantidad, total } = useOperarProductos()
+
+	const title = `[${cantidadProductos}] Tienda Hamburguesa Mega`
+	useDocument({ title })
 
 	return (
 		<>
@@ -50,5 +54,3 @@ function App() {
 		</>
 	)
 }
-
-export default App
