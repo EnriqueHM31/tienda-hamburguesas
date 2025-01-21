@@ -1,4 +1,5 @@
 import { DESCRIPCION_TIENDA } from '../utils/constantes.js'
+import { Link } from 'react-router-dom'
 import Slider from '../components/Slider.jsx'
 
 export default function Header() {
@@ -12,9 +13,9 @@ export default function Header() {
 
 					<p>{DESCRIPCION_TIENDA}</p>
 
-					<a className="btn-header" href="/">
+					<Link className="btn-header" to="/productos">
 						Comprar
-					</a>
+					</Link>
 				</div>
 			</div>
 		</header>
