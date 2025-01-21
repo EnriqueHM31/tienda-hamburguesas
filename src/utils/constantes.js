@@ -3,7 +3,7 @@ export const LINKS_NAVS = [
 	{ texto: 'Productos', url: '/productos' },
 	{ texto: 'Conocenos', url: '/conocenos' },
 	{ texto: 'Galeria', url: '/galeria' },
-	{ texto: 'Contacto', url: '/' },
+	{ texto: 'Contacto', url: '/contacto' },
 ]
 
 export const DESCRIPCION_TIENDA = [
