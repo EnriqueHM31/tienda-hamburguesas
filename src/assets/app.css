@@ -831,7 +831,6 @@ body {
     min-height: 100dvh;
     width: 100%;
     max-width: 80%;
-    overflow: hidden;
     gap: 4rem;
     margin: 0 auto;
 }
@@ -930,7 +929,7 @@ body {
     width: 50%;
     position: relative;
     animation: TranslacionYtop 1s ease-in-out;
-    z-index: 100;
+    z-index: 80;
 }
 
 .formulario h2 {
@@ -1452,6 +1451,30 @@ body {
         grid-template-rows: 13rem 17rem 13rem 17rem;
     }
 
+    /*FORMULARIO DE CONTACTO*/
+
+    .seccion-contacto {
+        flex-direction: column;
+        padding: 8rem 0;
+    }
+
+    .contenido-contacto {
+        width: 100%;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .redes-sociales {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .logo-contacto {
+        width: 100%;
+    }
+
     /*CARRITO DE COMPRAS*/
 
     .contenedor-productos {
@@ -1537,5 +1560,12 @@ body {
     .contenido-pago {
         justify-content: space-between;
         padding: 0;
+    }
+
+    /*SECCION CONTACTO*/
+
+    .redes-sociales a:hover::after {
+        left: -50%;
+        top: -5rem;
     }
 }
