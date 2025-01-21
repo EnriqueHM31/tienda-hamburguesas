@@ -8,6 +8,7 @@ import Header from './pages/Header.jsx'
 import Conocenos from './pages/Conocenos.jsx'
 import Productos from './pages/Productos.jsx'
 import Galeria from './pages/Galeria.jsx'
+import Contacto from './pages/Contacto.jsx'
 //HOOOKS
 import useProducto from './hooks/producto'
 import useProductoInfo from './hooks/productoInfo.js'
@@ -45,6 +46,7 @@ export default function App() {
 				/>
 				<Route path="/conocenos" element={<Conocenos />} />
 				<Route path="/galeria" element={<Galeria />} />
+				<Route path="/contacto" element={<Contacto />} />
 				<Route
 					path="/carrito"
 					element={<Carrito carrito={carrito} handleClickAgregarCantidad={handleClickAgregarCantidad} handleClickQuitarCantidad={handleClickQuitarCantidad} total={total} />}
