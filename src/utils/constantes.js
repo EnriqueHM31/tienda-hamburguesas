@@ -39,3 +39,7 @@ export const GALERIA = [
 	{ id: 8, url: '../src/assets/img/galeria/galeria8.webp', alt: 'Imagen parte de la galeria 8' },
 	{ id: 9, url: '../src/assets/img/galeria/galeria9.webp', alt: 'Imagen parte de la galeria 9' },
 ]
+
+export const UBICACION = [
+	'La tienda de hamburguesas está ubicada en el centro de la ciudad, en la calle principal, a unos metros de la plaza central. Se encuentra cerca de una estación de metro y varias paradas de autobús, lo que la hace de fácil acceso para quienes se desplazan en transporte público. Además, está rodeada de tiendas de moda y cafés, en una zona muy transitada y popular entre locales y turistas.',
+]
