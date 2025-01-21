@@ -5,7 +5,7 @@ import TikTok from '../components/icon/TikTok'
 export default function Contacto() {
 	return (
 		<section className="seccion-contacto">
-			<div className="contenido-contacto">
+			<article className="contenido-contacto">
 				<div className="ubicacion">
 					<h2>Ubicacion</h2>
 					<p>
@@ -17,7 +17,7 @@ export default function Contacto() {
 
 				<div className="siguenos">
 					<h2>Siguenos</h2>
-					<div className="redes-sociales">
+					<ul className="redes-sociales">
 						<a href="/contacto">
 							<Facebook />
 						</a>
@@ -29,9 +29,21 @@ export default function Contacto() {
 						<a href="/contacto">
 							<TikTok />
 						</a>
-					</div>
+					</ul>
 				</div>
-			</div>
+			</article>
+
+			<form className="formulario">
+				<h2>Formulario de contacto</h2>
+
+				<div className="contenido-formulario">
+					<input type="text" placeholder="Nombre" required />
+					<input type="text" placeholder="Email" required />
+					<textarea placeholder="Mensaje" required></textarea>
+					<button>Enviar</button>
+				</div>
+				<img src="/src/assets/img/logo.svg" alt="logo" className="logo-contacto" />
+			</form>
 		</section>
 	)
 }
